@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Frontend estático para el sistema RPG",
   "scripts": {
-    "start": "serve public"
+    "start": "http-server public -p $PORT --proxy http://localhost:$PORT?"
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
