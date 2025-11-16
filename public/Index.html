@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Juego de Rol - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-section" id="loginSection">
+            <h1>🎮 Juego de Rol</h1>
+            <p>Sistema de Gestión de Personajes y Habilidades</p>
+
+            <div id="loginAlert" class="alert alert-error hidden"></div>
+
+            <form id="loginForm" onsubmit="login(event)">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" placeholder="Ingresa tu usuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+
+            <div style="margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.1); border-radius: 10px;">
+                <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 10px;">
+                    💡 **Usuarios de prueba:**
+                </p>
+                <p style="font-size: 0.85rem; opacity: 0.8;">
+                    **ADMIN:** admin / admin123<br>
+                    **USER:** dragon_slayer / pass123<br>
+                    **USER:** magic_master / pass456
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section" id="contentSection">
+            <div class="header-bar">
+                <div>
+                    <h2>Panel de Control</h2>
+                </div>
+                <button onclick="logout()" class="btn btn-danger" style="width: auto; padding: 10px 30px;">
+                    🚪 Cerrar Sesión
+                </button>
+            </div>
+
+            <div class="user-info" id="userInfo">
+                <p>
+                    **👤 Usuario:** <span id="displayUsername"></span>
+                    <span class="role-badge" id="displayRole"></span>
+                </p>
+                <p>**📧 Email:** <span id="displayEmail"></span></p>
+            </div>
+
+            <div class="actions-panel" id="actionsPanel"></div>
+
+            <div id="dynamicContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
