@@ -4,9 +4,12 @@
   "description": "Frontend estático para el sistema RPG",
   "main": "index.html",
   "scripts": {
-    "start": "serve -s"
+    "start": "serve -s public -l $PORT"
   },
   "dependencies": {
     "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
