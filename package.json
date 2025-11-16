@@ -2,11 +2,12 @@
   "name": "rpg-frontend-static",
   "version": "1.0.0",
   "description": "Frontend estático para el sistema RPG",
+  "main": "server.js",
   "scripts": {
-    "start": "http-server public -p $PORT --proxy http://localhost:$PORT?"
+    "start": "node server.js"
   },
   "dependencies": {
-    "http-server": "^14.1.1"
+    "express": "^4.18.2"
   },
   "engines": {
     "node": ">=18.x"
