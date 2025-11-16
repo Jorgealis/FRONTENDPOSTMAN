@@ -2,14 +2,10 @@
   "name": "rpg-frontend-static",
   "version": "1.0.0",
   "description": "Frontend estático para el sistema RPG",
-  "main": "index.html",
   "scripts": {
-    "start": "serve -s public -l $PORT"
+    "start": "serve public"
   },
   "dependencies": {
     "serve": "^14.2.0"
-  },
-  "engines": {
-    "node": ">=18.x"
   }
 }
